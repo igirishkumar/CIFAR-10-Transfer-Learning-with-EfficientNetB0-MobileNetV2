@@ -1,12 +1,12 @@
 
-# CIFAR-10 Transfer Learning: EfficientNetB0 & MobileNetV2 → 93% Accuracy
+# CIFAR-10 Transfer Learning: EfficientNetB0 & MobileNetV2
 
 <div align="center">
 
 <img src="assets/title_slide.jpg" alt="Image Classification using CNN and Transfer Learning" width="100%"/>
 
-**Girish Kumar**
-*From Overfitting Baseline to State-of-the-Art Performance*
+
+> **From Overfitting Baseline to State-of-the-Art Performance**
 
 </div>
 
@@ -61,11 +61,11 @@ from tensorflow.keras.datasets import cifar10
 ## Results & Model Comparison
 
 | Model                  | Test Accuracy | Parameters | Train-Val Gap | Training Time |
-|------------------------|---------------|------------|----------------|---------------|
+|------------------------|---------------|------------|---------------|---------------|
 | Baseline CNN           | ~70%          | 0.12M      | 12%           | 15 min        |
-| Optimized CNN          | 90%         | 1.8M       | 5%            | 20 min        |
+| Optimized CNN          | 90%           | 1.8M       | 5%            | 20 min        |
 | MobileNetV2            | 91.1%         | 2.3M       | 4.9%          | 25 min        |
-| **EfficientNetV2-B0**  | **93%**     | 5.9M       | **6%**       | 45 min        |
+| **EfficientNetB0**     | **93%**       | 5.9M       | **6%**        | 45 min        |
 
 > **Two-phase fine-tuning** + **strong augmentation** = the winning strategy
 
@@ -76,7 +76,7 @@ from tensorflow.keras.datasets import cifar10
 | Category              | Tools Used                                      |
 |-----------------------|-------------------------------------------------|
 | Framework             | TensorFlow 2.13+, Keras                         |
-| Models                | Custom CNN, MobileNetV2, EfficientNetV2-B0      |
+| Models                | Custom CNN, MobileNetV2, EfficientNetB0      |
 | Data Augmentation     | `tf.image`, Rotation, Flip, Zoom, Shift         |
 | Callbacks             | EarlyStopping, ReduceLROnPlateau, ModelCheckpoint |
 | Learning Rate         | Cosine Decay + 1e-5 fine-tuning                 |
@@ -98,28 +98,18 @@ pip install tensorflow matplotlib numpy scikit-learn seaborn
 
 ---
 
-## Usage
-
-```python
-# Train the best model (EfficientNetV2-B0)
-from models.efficientnetv2 import train_efficientnetv2_b0
-model, history = train_efficientnetv2_b0()
-
-# Predict on your own photo
-from utils.predict import predict_image
-predict_image("my_truck.jpg", model)
-```
-
----
-
-## Final Model Download
+## Final Model Download & Usage
 
 **Best Model with Full Training History Included**  
-[EfficientNetV2-B0_95.3%_WITH_HISTORY.keras](https://drive.google.com/file/d/YOUR_LINK_HERE/view?usp=sharing)
+[EfficientNetB0_93%_WITH_HISTORY.keras](https://drive.google.com/file/d/YOUR_LINK_HERE/view?usp=sharing)
 
 ```python
-model = tf.keras.models.load_model("EfficientNetV2-B0_95.3%_WITH_HISTORY.keras")
+model = tf.keras.models.load_model("EfficientNetB0_95.3%_WITH_HISTORY.keras")
 history = model.history.history  # Works 100%!
+
+# Predict your own photo
+from utils.predict import predict_image
+predict_image("my_truck.jpg", model)
 ```
 
 ---
