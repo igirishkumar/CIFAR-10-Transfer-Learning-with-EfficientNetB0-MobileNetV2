@@ -1,5 +1,4 @@
 
-```markdown
 # CIFAR-10 Transfer Learning: EfficientNetB0 & MobileNetV2 → 93% Accuracy
 
 <div align="center">
@@ -145,6 +144,5 @@ history = model.history.history  # Works 100%!
 Let’s break **97%+** together!
 
 </div>
-```
 
 
