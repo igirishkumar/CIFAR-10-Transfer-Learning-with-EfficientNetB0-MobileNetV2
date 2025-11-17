@@ -3,9 +3,6 @@
 
 <div align="center">
 
-<img src="assets/title_slide.jpg" alt="Image Classification using CNN and Transfer Learning" width="100%"/>
-
-
 > **From Overfitting Baseline to State-of-the-Art Performance**
 
 </div>
@@ -22,9 +19,6 @@
 
 </div>
 
-<div align="center">
-  <img src="assets/contents_slide.jpg" alt="Project Contents" width="90%"/>
-</div>
 
 ---
 
