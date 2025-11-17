@@ -98,7 +98,7 @@ pip install tensorflow matplotlib numpy scikit-learn seaborn
 [EfficientNetB0_93%_WITH_HISTORY.keras](https://drive.google.com/file/d/YOUR_LINK_HERE/view?usp=sharing)
 
 ```python
-model = tf.keras.models.load_model("EfficientNetB0_95.3%_WITH_HISTORY.keras")
+model = tf.keras.models.load_model("EfficientNetB0_93%_WITH_HISTORY.keras")
 history = model.history.history  # Works 100%!
 
 # Predict your own photo
